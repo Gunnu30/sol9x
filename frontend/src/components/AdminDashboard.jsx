@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
   const getStudentDetails = async () => {
     try {
-      const res = await fetch("http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/admin/students" , {
+      const res = await fetch("http://so3h-backend.vercel.app/api/admin/students" , {
         method:"GET"
       });
       if (!res.ok) throw new Error("Failed to fetch student data");
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
 
     try {
-        const res = await fetch(`http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/admin/student/delete/${studentId}`, {
+        const res = await fetch(`http://so3h-backend.vercel.app/api/admin/student/delete/${studentId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

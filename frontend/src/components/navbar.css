@@ -1,0 +1,74 @@
+
+/* 🌐 NavBar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3a8a; /* Deep blue */
+  color: white;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  border-radius:10px;
+  top: 0;
+  z-index: 1000;
+}
+/*div sol9x*/
+/* index.css */
+.app-para {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+}
+
+
+/*/* index.css */
+
+/* 🏷️ Branding */
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color:#ffffff;
+}
+
+/* 📍 Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 👋 Welcome Text */
+.navbar-welcome {
+  font-size: 1rem;
+  color: #e0e7ff;
+}
+
+/* 🔘 Logout Button */
+.navbar-logout {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-logout:hover {
+  background-color: #b91c1c;
+}
+
+/* 🔐 Login Link */
+.navbar-login {
+  color: #93c5fd;
+  text-decoration: underline;
+  font-weight: 500;
+}
+

@@ -1,0 +1,152 @@
+/* index.css */
+/* index.css */
+
+/* 🧭 Dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 🏷️ Main Title */
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a; /* Tailwind blue-900 */
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+/* 📌 Subtitle */
+.dashboard-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #374151; /* Tailwind gray-700 */
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+
+li{
+    list-style-type:none;
+}
+/* 🧾 Student Card Styling */
+.student-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* 🔘 Button Base */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* ✏️ Edit Button */
+.btn-edit {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #1d4ed8; /* Tailwind blue-700 */
+}
+
+/* 🗑️ Delete Button */
+.btn-delete {
+  background-color: #dc2626; /* Tailwind red-600 */
+  color: white;
+  margin-left: 1rem;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c; /* Tailwind red-700 */
+}
+/* 🧾 Edit Form Container */
+.edit-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* 🏷️ Title */
+.edit-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* 📝 Form Layout */
+.edit-form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* 🔖 Labels */
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ✏️ Inputs */
+.form-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+/* 💾 Submit Button */
+.form-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ⏳ Loading Text */
+.loading-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+}
+.form-input[type="date"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #111827;
+}

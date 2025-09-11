@@ -1,8 +1,11 @@
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import './cssfiles/studdash.css'
+import { useNavigate } from 'react-router-dom';
+
 const StudentEdit = () => {
   const { id, token } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [details, setDetails] = useState(null);
 
@@ -51,6 +54,7 @@ const StudentEdit = () => {
       const result = await res.json();
       if (result.student) {
         alert("Student details updated successfully!");
+        navigate("/student/dashboard")
       } else {
         alert("Update failed.");
       }

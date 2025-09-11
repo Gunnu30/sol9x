@@ -27,7 +27,7 @@ class Register extends Component {
     this.setState({ isLoading: true, error: "" });
 
     try {
-      const res = await fetch(`http://so3h-backend.vercel.app/api/${role}/register`, {
+      const res = await fetch(`https://so3h-backend.vercel.app/api/${role}/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, role })

@@ -12,7 +12,7 @@ const StudentEdit = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/student/${id}`, {
+        const res = await fetch(`http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/student/${id}`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`
@@ -42,7 +42,7 @@ const StudentEdit = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/student/edit/${id}`, {
+      const res = await fetch(`http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/student/edit/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

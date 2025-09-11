@@ -42,7 +42,7 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
 
     try {
-        const res = await fetch(`http://localhost:5000/api/admin/student/delete/${studentId}`, {
+        const res = await fetch(`http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/admin/student/delete/${studentId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

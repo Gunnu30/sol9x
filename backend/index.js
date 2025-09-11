@@ -11,8 +11,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors({ origin: "*", credentials: true }));
+// ✅ Replace this with your actual frontend domain
+const FRONTEND_URL = "https://solo3-project-6.vercel.app";
+
+// ✅ Middleware
+app.use(cors({
+  origin: FRONTEND_URL,
+  credentials: true,
+}));
 app.use(express.json());
 
 // Routes

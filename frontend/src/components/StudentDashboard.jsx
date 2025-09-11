@@ -17,7 +17,7 @@ const StudentDashboard = () => {
 
   const fetchData = async (userId) => {
     try {
-      const res = await fetch(`http://so3h-backend.vercel.app/api/student/${userId}`, {
+      const res = await fetch(`https://so3h-backend.vercel.app/api/student/${userId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

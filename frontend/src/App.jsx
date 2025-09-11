@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import StudentDashboard from "./components/StudentDashboard";
-import StudentEdit from "./components/studentEdit";
+import StudentEdit from "./components/StudentEdit";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import DefaultRoute from "./routes/DefaultRoute";
 import AdminDashboard from "./components/AdminDashboard";

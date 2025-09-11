@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
   const getStudentDetails = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/admin/students" , {
+      const res = await fetch("http://sol9x-mi3ktmohd-tookala-pushpak-ashriths-projects.vercel.app/api/admin/students" , {
         method:"GET"
       });
       if (!res.ok) throw new Error("Failed to fetch student data");

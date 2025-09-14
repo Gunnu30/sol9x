@@ -46,7 +46,7 @@ const AdminDashboard = () => {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
-            Authorization : `Barier ${Cookies.get("token")}`
+            Authorization : `Bearer ${Cookies.get("token")}`
         }
         });
         

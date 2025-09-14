@@ -1,22 +1,17 @@
-// index.js
-require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
-
 const studentRoutes = require("./src/routes/student");
-const adminRoutes   = require("./src/routes/admin");
+const adminRoutes = require("./src/routes/admin");
 
-const app  = express();
-const port = process.env.PORT || 5000;
+const app = express();
 
-// Allowed origins (dev + prod)
+// ✅ Allowed frontend origins
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://solo3-project-6.vercel.app"
+  "https://sol9x-project-vercel1.app"
 ];
 
-// CORS options
+// ✅ CORS options
 const corsOptions = {
   origin(origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -30,37 +25,23 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"]
 };
 
-// Apply CORS (handles preflight internally)
+// ✅ Apply CORS middleware
 app.use(cors(corsOptions));
-
-// Built-in JSON body parser
 app.use(express.json());
 
-// ---- Your API Routes ----
+// ✅ Routes
 app.use("/api", adminRoutes);
 app.use("/api", studentRoutes);
 
-// Health-check endpoint
+// ✅ Health check
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "Backend is running!" });
 });
 
-// Catch-all error handler
+// ✅ Error handler
 app.use((err, req, res, next) => {
   console.error("🔥 Server error:", err.message);
   res.status(err.statusCode || 500).json({ error: err.message });
 });
 
-// Connect to MongoDB and start the server
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  app.listen(port, () => {
-    console.log(`✅ Server running on port ${port}`);
-  });
-})
-.catch(error => {
-  console.error("❌ DB connection error:", error);
-});
+module.exports = app;

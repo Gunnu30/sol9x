@@ -24,7 +24,7 @@ class Login extends Component {
     this.setState({ isLoading: true, error: "" });
 
     try {
-      const res = await fetch(`https://so3h-backend.vercel.app/api/${role}/login`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/${role}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, role })

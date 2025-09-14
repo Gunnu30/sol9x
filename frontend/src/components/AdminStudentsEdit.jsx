@@ -22,7 +22,7 @@ const EditStudent = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await fetch(`https://so3h-backend.vercel.app/api/admin/student/${id}`);
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/admin/student/${id}`);
         const data = await res.json();
         setStudent(data.student);
         setFormData({
@@ -62,7 +62,7 @@ const EditStudent = () => {
       };
 
    
-        const res = await fetch(`https://so3h-backend.vercel.app/api/admin/student/edit/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/admin/student/edit/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
